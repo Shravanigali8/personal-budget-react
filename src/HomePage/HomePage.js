@@ -1,60 +1,91 @@
-import React from  'react';
+import React from "react";
+import ChartJS from "../ChartJS/ChartJS";
+import D3JSChart from "../D3JSChart/D3JSChart";
 
 function HomePage() {
-  return (
-    <main>
-    <section aria-labelledby="stay-on-track">
-        <article>
-            <h2 id="stay-on-track">Stay on Track</h2>
-            <p>
-                Do you know where you are spending your money? With proper budget tracking,
-                you can achieve financial stability and reach your goals.
-            </p>
+    const sampleChartData = {
+      labels: ["Food", "Rent", "Entertainment", "Transport"],
+      datasets: [
+        {
+          label: "Budget Allocation",
+          data: [500, 1000, 300, 200],
+          backgroundColor: ["#FF6384", "#36A2EB", "#FFCE56", "#4BC0C0"],
+        },
+      ],
+    };
+  
+    const d3JSData = [
+      { label: "Food", budget: 500 },
+      { label: "Rent", budget: 1000 },
+      { label: "Entertainment", budget: 300 },
+      { label: "Transport", budget: 200 },
+    ];
+
+    return (
+      <main className="center" id="main">
+
+      <div className="page-area">
+
+          <article>
+              <h1>Stay on track</h1>
+              <p>
+                  Do you know where you are spending your money? If you really stop to track it down,
+                  you would get surprised! Proper budget management depends on real data... and this
+                  app will help you with that!
+              </p>
+          </article>
+  
+          <article>
+              <h1>Alerts</h1>
+              <p>
+                  What if your clothing budget ended? You will get an alert. The goal is to never go over the budget.
+              </p>
+          </article>
+  
+          <article>
+              <h1>Results</h1>
+              <p>
+                  People who stick to a financial plan, budgeting every expense, get out of debt faster!
+                  Also, they to live happier lives... since they expend without guilt or fear... 
+                  because they know it is all good and accounted for.
+              </p>
+          </article>
+  
+          <article>
+              <h1>Free</h1>
+              <p>
+                  This app is free!!! And you are the only one holding your data!
+              </p>
+          </article>
+  
+          <article>
+              <h1>Stay on track</h1>
+              <p>
+                  Do you know where you are spending your money? If you really stop to track it down,
+                  you would get surprised! Proper budget management depends on real data... and this
+                  app will help you with that!
+              </p>
+          </article>
+  
+          <article>
+              <h1>Alerts</h1>
+              <p>
+                  What if your clothing budget ended? You will get an alert. The goal is to never go over the budget.
+              </p>
+          </article>
+  
+          <article>
+          <h1>Chart</h1>
+          <ChartJS chartData={sampleChartData} />
         </article>
-    </section>
-
-    <section aria-labelledby="alerts">
         <article>
-            <h2 id="alerts">Alerts</h2>
-            <p>
-                Stay updated with alerts if you're about to exceed your set budget. Never
-                spend beyond your means.
-            </p>
+          <h1>D3JS Chart</h1>
+          <D3JSChart d3JSDataSource={d3JSData} />
         </article>
-    </section>
-
-    <section aria-labelledby="results">
-        <article>
-            <h2 id="results">Results</h2>
-            <p>
-                Budgeting helps you get out of debt faster and live a guilt-free, happier life.
-                Spend with confidence!
-            </p>
-        </article>
-    </section>
-
-    <section aria-labelledby="free">
-        <article>
-            <h2 id="free">Free</h2>
-            <p>
-                Enjoy a free app where you are in full control of your data. Start budgeting today!
-            </p>
-        </article>
-    </section>
-
-    <section aria-labelledby="chart">
-        <article>
-            <h2 id="chart">Chart</h2>
-            <canvas id="myChart" width="400" height="400" aria-label="Budget Chart" role="img"></canvas>
-        </article>
-    </section>
-    
-    <h2 style={{ textAlign: "center" }}>D3.js Chart</h2>
-    <div id="d3-chart" style={{ width: "100%", height: "400px" }}></div>
-
-</main>
-
-  );
-}
-
-export default HomePage;
+      </div>
+    </main>
+    );
+  }
+  
+  export default HomePage;
+  
