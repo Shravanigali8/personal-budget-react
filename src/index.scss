@@ -1,22 +1,21 @@
-// 🎨 SCSS Variables for Reusability
 $primary-color: #00c6ff;
 $secondary-color: #0072ff;
 $text-color: #e0f7ff;
 $background-dark: #001f3f;
 $box-shadow-light: rgba(0, 198, 255, 0.5);
 
-// 📏 Typography & Spacing
+
 $font-stack: 'Segoe UI', Tahoma, Geneva, sans-serif;
 $font-size: 16px;
 
-// 🌍 Global Reset
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-// 🌐 Document Styling
+
 html {
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
@@ -30,7 +29,7 @@ body {
   background-color: $background-dark;
 }
 
-// 🔗 Navigation Bar
+
 nav {
   background: linear-gradient(90deg, $primary-color, $secondary-color);
   padding: 10px 20px;
@@ -60,7 +59,7 @@ nav {
   }
 }
 
-// 📌 Hero Section
+
 .hero {
   background: linear-gradient(180deg, $secondary-color, $background-dark);
   text-align: center;
@@ -79,7 +78,7 @@ nav {
   }
 }
 
-// 📜 Main Content
+
 main {
   max-width: 900px;
   margin: 40px auto;
@@ -89,7 +88,7 @@ main {
   padding: 20px;
 }
 
-// 📌 Article Styling
+
 article {
   background: $background-dark;
   border: 1px solid $secondary-color;
@@ -117,7 +116,7 @@ article {
   }
 }
 
-// 📊 Chart Containers
+
 .chart-container {
   width: 350px;
   height: 350px;
@@ -126,7 +125,7 @@ article {
   align-items: center;
 }
 
-// 📌 Footer Styling
+
 footer {
   background: linear-gradient(90deg, $secondary-color, $primary-color);
   color: $text-color;
